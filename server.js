@@ -4,7 +4,7 @@ const hbs = require('hbs');
 
 const app = express();
 
-const port = process.env.PORT || 80;
+const port = process.env.PORT || 3000;
 
 app.set('view engine', 'hbs');
 
@@ -35,6 +35,12 @@ app.get('/', (req, res) =>{
 app.get('/about', (req, res)=>{
     res.render('about', {
         pageTitle :'About'
+    });
+});
+
+app.get('/projects', (req, res)=>{
+    res.render('projects', {
+        pageTitle : 'My Projects'
     });
 });
 
